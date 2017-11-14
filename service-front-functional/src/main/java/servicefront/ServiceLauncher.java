@@ -1,4 +1,4 @@
-package systems.appollo.servicefront;
+package servicefront;
 
 import java.io.File;
 import java.io.IOException;

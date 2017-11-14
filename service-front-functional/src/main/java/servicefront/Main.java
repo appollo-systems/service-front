@@ -1,10 +1,8 @@
-package systems.appollo.servicefront;
+package servicefront;
 
 import org.yaml.snakeyaml.Yaml;
 
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.InputStream;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -20,7 +18,13 @@ public class Main {
     private static final Map<String, Process> nameToService = new HashMap<>();
 
     public static void main(String[] args) throws IOException {
-        InputStream is = new FileInputStream("service-front.yaml");
+        PrintStream printStream = new PrintStream(new FileOutputStream("output.txt"));
+        System.setOut(printStream);
+        System.setErr(printStream);
+
+        System.err.println("Launching");
+
+        InputStream is = new FileInputStream("service-front-config.yaml");
         Configuration configuration = YAML.loadAs(is, Configuration.class);
         configuration.getServices().forEach((name,data)->{
             try {

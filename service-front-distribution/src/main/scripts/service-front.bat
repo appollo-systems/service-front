@@ -1,0 +1,1 @@
+start javaw -jar ..\lib\service-front-functional-1.0-SNAPSHOT.jar

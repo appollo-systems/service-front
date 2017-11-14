@@ -1,0 +1,17 @@
+services:
+  tomcat1:
+    commandLine: cmd /c set
+    environment:
+      - THIS=THAT
+      - THOSE=THESE
+    workingDirectory: c:\temp
+    stdErrFile: "tomcat1_stdErr.log"
+    stdOutFile: "tomcat1_stdOut.log"
+  test1:
+    commandLine: cmd /c mvn -DskipTests clean
+    environment:
+      - THIS=THAT
+      - THOSE=THESE
+    workingDirectory: E:\MyDocuments\@Docs\@Archive\2017\ams\code\ams
+    stdErrFile: "mvn_err.log"
+    stdOutFile: "mvn_log.log"

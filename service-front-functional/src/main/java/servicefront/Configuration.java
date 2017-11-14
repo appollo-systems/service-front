@@ -1,4 +1,4 @@
-package systems.appollo.servicefront;
+package servicefront;
 
 import java.util.HashMap;
 import java.util.Map;
